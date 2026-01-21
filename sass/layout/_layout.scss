@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/** @section Layout */
+body {
+  color: var(--primary);
+  background: linear-gradient(to right, var(--primary-background), var(--secondary-background));
+  display: flex;
+  min-block-size: 100dvb;
+  padding-inline: var(--outer-inline-padding);
+  flex-direction: column;
+}
+main {
+  inline-size: min(var(--max-form-size), 100%);
+  margin: auto;
+}

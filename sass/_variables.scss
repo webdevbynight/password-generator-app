@@ -1,6 +1,17 @@
 @charset "utf-8";
+@use "./base/functions" as *;
 
 // Variables
 :root {
+  // Fonts
   --primary-font: "JetBrains Mono";
+
+  // Colours
+  --primary: white;
+  --primary-background: #08070b;
+  --secondary-background: #08070b;
+
+  // Sizes, gaps, margins, paddings, borders, transforms
+  --outer-inline-padding: #{px2rem(16)};
+  --max-form-size: #{px2rem(540)};
 }

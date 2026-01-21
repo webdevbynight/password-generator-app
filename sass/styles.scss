@@ -8,9 +8,6 @@
 
 // Browser configuration
 @use "./base/config" as *;
-// Add the extra supported browsers here, using the following statement
-$supported-browsers: list.append($supported-browsers, name-of-the-browser);
-// Add the minimal browser version to take into account here if different from the default browser support (variables to use: $firefox, $safari, $chrome, $firefox-android, $safari-ios, $opera-mini)
 
 @use "./base/mixins" with (
   $media-queries-breakpoints: (
@@ -22,3 +19,4 @@ $supported-browsers: list.append($supported-browsers, name-of-the-browser);
 @use "./base/print";
 @use "./typo/font-face";
 @use "./typo/typo";
+@use "./layout/layout";

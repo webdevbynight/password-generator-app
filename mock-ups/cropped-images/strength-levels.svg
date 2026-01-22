@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="64" height="140" viewBox="0 0 64 140">
+  <style type="text/css">
+    .level {
+      stroke: #e6e5ea;
+      stroke-width: 2;
+      fill: none;
+    }
+    .level-too-weak {
+      stroke: #f64a4a;
+      fill: #f64a4a;
+    }
+    .level-weak {
+      stroke: #fb7c58;
+      fill: #fb7c58;
+    }
+    .level-medium {
+    stroke: #f8cd65;
+    fill: #f8cd65;
+    }
+    .level-strong {
+      stroke: #a4ffaf;
+      fill: #a4ffaf;
+    }
+  </style>
+  <defs>
+    <rect id="bar" width="8" height="26"/>
+  </defs>
+  <g id="level-0">
+    <use class="level" xlink:href="#bar" transform="translate(1,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(19,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(37,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(55,1)"/>
+  </g>
+  <g id="level-1" transform="translate(0,28)">
+    <use class="level level-too-weak" xlink:href="#bar" transform="translate(1,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(19,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(37,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(55,1)"/>
+  </g>
+  <g id="level-2" transform="translate(0,56)">
+    <use class="level level-weak" xlink:href="#bar" transform="translate(1,1)"/>
+    <use class="level level-weak" xlink:href="#bar" transform="translate(19,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(37,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(55,1)"/>
+  </g>
+  <g id="level-3" transform="translate(0,84)">
+    <use class="level level-medium" xlink:href="#bar" transform="translate(1,1)"/>
+    <use class="level level-medium" xlink:href="#bar" transform="translate(19,1)"/>
+    <use class="level level-medium" xlink:href="#bar" transform="translate(37,1)"/>
+    <use class="level" xlink:href="#bar" transform="translate(55,1)"/>
+  </g>
+  <g id="level-4" transform="translate(0,112)">
+    <use class="level level-strong" xlink:href="#bar" transform="translate(1,1)"/>
+    <use class="level level-strong" xlink:href="#bar" transform="translate(19,1)"/>
+    <use class="level level-strong" xlink:href="#bar" transform="translate(37,1)"/>
+    <use class="level level-strong" xlink:href="#bar" transform="translate(55,1)"/>
+  </g>
+</svg>

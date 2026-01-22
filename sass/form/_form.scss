@@ -1,0 +1,155 @@
+@charset "utf-8";
+@use "../base/mixins" as *;
+
+/** @section Form */
+#password-generator {
+  font-size: var(--form-size);
+  line-height: var(--form-line-height);
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-gap);
+  > p, .prepare {
+    background: var(--tertiary-background);
+    display: flex;
+    padding: var(--form-inline-padding);
+  }
+  > p {
+    order: -1;
+    button {
+      font-size: var(--copy-size);
+      line-height: var(--copy-line-height);
+      border: none;
+      path {
+        fill: var(--quinary);
+        transition: fill 250ms ease-in;
+      }
+      &:hover, &:focus {
+        path {
+          fill: var(--senary);
+        }
+      }
+    }
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    margin-block-end: var(--checkbox-list-block-margin-end);
+    &:has(input[type="range"]) {
+      display: flex;
+      flex-direction: column;
+      gap: var(--range-gap);
+      margin-block-end: var(--checkbox-list-block-margin-start);
+      label {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+  input, button {
+    font-weight: inherit;
+    border: none;
+  }
+  input {
+    &[readonly] {
+      font-size: var(--password-size);
+      line-height: var(--password-line-height);
+      background: transparent;
+      flex: 1;
+    }
+    &::placeholder {
+      color: var(--tertiary);
+    }
+  }
+  button {
+    &[type="submit"] {
+      text-transform: uppercase;
+      color: var(--quaternary);
+      background: var(--quinary-background);
+      padding: var(--submit-button-padding);
+      box-sizing: border-box;
+      transition: 250ms ease-in;
+      transition-property: color, background;
+      &::after {
+        background: url("images/icon-arrow.svg") no-repeat;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-inline-start: var(--submit-button-gap);
+        content: "";
+        transition: background-position-y 250ms ease-in;
+      }
+      &:hover, &:focus {
+        color: var(--quinary);
+        background: transparent;
+        padding: var(--submit-button-padding-hover);
+        border: var(--submit-button-border-width) solid var(--quinary);
+        &::after {
+          background-position-y: -12px;
+        }
+      }
+    }
+  }
+  .prepare {
+    flex-direction: column;
+    gap: var(--form-prepare-gap);
+    p:last-of-type {
+      display: inline-flex;
+      flex-direction: column;
+      order: 1;
+    }
+  }
+  .strength {
+    text-transform: uppercase;
+    color: var(--secondary);
+    background: var(--quaternary-background);
+    padding: var(--strength-block-padding) var(--strength-inline-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:has([class^=level]) {
+      align-items: baseline;
+    }
+    dd {
+      font-size: var(--strength-size);
+      line-height: 1;
+      color: var(--primary);
+      display: inline-flex;
+      gap: var(--strength-gap);
+      align-items: center;
+      &::after {
+        background: url("images/strength-levels.svg") no-repeat;
+        display: inline-block;
+        width: 64px;
+        height: 28px;
+        content: "";
+      }
+      &.level-too-weak::after {
+        background-position-y: -28px;
+      }
+      &.level-weak::after {
+        background-position-y: -56px;
+      }
+      &.level-medium::after {
+        background-position-y: -84px;
+      }
+      &.level-strong::after {
+        background-position-y: -112px;
+      }
+    }
+  }
+  .character-length-number {
+    font-size: var(--character-length-size);
+    line-height: var(--character-length-line-height);
+    color: var(--quinary);
+  }
+  @include css-media-queries($from-breakpoint: greater-text) {
+    > p {
+      padding-block: var(--password-block-padding);
+    }
+    .prepare {
+      padding-block: var(--form-block-padding);
+    }
+  }
+}

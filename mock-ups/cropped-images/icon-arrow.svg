@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="12" height="24" viewBox="0 0 12 24">
+  <defs>
+    <path id="arrow" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/>
+  </defs>
+  <g>
+    <use xlink:href="#arrow" fill="#18171f"/>
+  </g>
+  <g transform="translate(0,12)">
+    <use xlink:href="#arrow" fill="#a4ffaf"/>
+  </g>
+</svg>

@@ -10,6 +10,10 @@ body {
   flex-direction: column;
 }
 main {
-  inline-size: min(var(--max-form-size), 100%);
+  inline-size: min(var(--max-form-width), 100%);
   margin: auto;
+}
+h1 {
+  color: var(--secondary);
+  margin-block-end: var(--form-gap);
 }

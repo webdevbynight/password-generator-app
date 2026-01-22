@@ -1,5 +1,6 @@
 @charset "utf-8";
 @use "./base/functions" as *;
+@use "./base/mixins" as *;
 
 // Variables
 :root {
@@ -7,11 +8,65 @@
   --primary-font: "JetBrains Mono";
 
   // Colours
-  --primary: white;
+  --primary: #e6e5ea;
+  --secondary: #817d92;
+  --tertiary: #54535b;
+  --quaternary: #18171f;
+  --quinary: #a4ffaf;
+  --senary: white;
   --primary-background: #08070b;
   --secondary-background: #08070b;
+  --tertiary-background: #24232c;
+  --quaternary-background: #18171f;
+  --quinary-background: #a4ffaf;
 
   // Sizes, gaps, margins, paddings, borders, transforms
   --outer-inline-padding: #{px2rem(16)};
-  --max-form-size: #{px2rem(540)};
+  --max-form-width: #{px2rem(540)};
+  --form-gap: #{px2rem(16)};
+  --form-block-padding: #{px2rem(16)};
+  --form-inline-padding: #{px2rem(16)};
+  --form-prepare-gap: #{px2rem(16)};
+  --title-size: #{px2rem(16)};
+  --title-line-height: calc(20/16);
+  --form-size: #{px2rem(16)};
+  --form-line-height: calc(20/16);
+  --password-size: #{px2rem(24)};
+  --password-line-height: calc(32/24);
+  --password-block-padding: #{px2rem(16)};
+  --copy-size: #{px2rem(16)};
+  --copy-line-height: calc(20/16);
+  --character-length-size: #{px2rem(24)};
+  --character-length-line-height: calc(32/24);
+  --range-gap: #{px2rem(8)};
+  --checkbox-list-block-margin-start: #{px2rem(32)};
+  --checkbox-list-block-margin-end: #{px2rem(16)};
+  --strength-size: #{px2rem(18)};
+  --strength-block-padding: #{px2rem(14)};
+  --strength-inline-padding: #{px2rem(16)};
+  --strength-gap: #{px2rem(16)};
+  --submit-button-gap: #{px2rem(16)};
+  --submit-button-padding: #{px2rem(16)};
+  --submit-button-padding-hover: #{px2rem(14)};
+  --submit-button-border-width: #{px2rem(2)};
+
+  @include css-media-queries($from-breakpoint: greater-text) {
+    --form-gap: #{px2rem(24)};
+    --form-block-padding: #{px2rem(24)};
+    --form-inline-padding: #{px2rem(32)};
+    --form-prepare-gap: #{px2rem(32)};
+    --title-size: #{px2rem(24)};
+    --title-line-height: calc(32/24);
+    --form-size: #{px2rem(18)};
+    --form-line-height: calc(24/18);
+    --password-size: #{px2rem(32)};
+    --password-line-height: calc(42/32);
+    --copy-size: #{px2rem(18)};
+    --copy-line-height: calc(24/18);
+    --character-length-size: #{px2rem(32)};
+    --character-length-line-height: calc(42/32);
+    --range-gap: #{px2rem(16)};
+    --strength-size: #{px2rem(24)};
+    --submit-button-gap: #{px2rem(24)};
+  }
 }

@@ -1,5 +1,6 @@
 @charset "utf-8";
 @use "../base/mixins" as *;
+@use "./mixins-range" as *;
 
 /** @section Form */
 #password-generator {
@@ -56,8 +57,11 @@
     border: none;
   }
   input {
-    &[type="checkbox"] {
+    &[type="checkbox"],
+    &[type="range"] {
       appearance: none;
+    }
+    &[type="checkbox"] {
       width: var(--checkbox-size);
       height: var(--checkbox-size);
       border: var(--checkbox-border-width) solid var(--primary);
@@ -68,6 +72,48 @@
       }
       &:checked {
         background: var(--quinary) url("images/check.svg") no-repeat center;
+      }
+    }
+    &[type="range"] {
+      --offset: calc(100% * var(--value) / var(--max));
+      background: initial;
+      cursor: pointer;
+      position: relative;
+      &::-moz-range-track,
+      &::-moz-range-progress {
+        @include range-track-size;
+      }
+      &::-webkit-slider-runnable-track {
+        @include range-track-size;
+      }
+      &::-moz-range-track {
+        background: var(--quaternary-background);
+      }
+      &::-moz-range-progress {
+        background: var(--quinary-background);
+      }
+      &::-webkit-slider-runnable-track {
+        background: linear-gradient(
+            to right,
+            var(--quinary-background) var(--offset),
+            var(--quaternary-background) var(--offset)
+        );
+      }
+      &::-moz-range-thumb {
+        @include range-thumb;
+      }
+      &::-webkit-slider-thumb {
+        @include range-thumb;
+        appearance: none;
+        margin-block-start: calc((var(--range-track-height) - var(--range-thumb-size)) / 2);
+      }
+      &:hover, &:focus {
+        &::-moz-range-thumb {
+          @include range-thumb-hover;
+        }
+        &::-webkit-slider-thumb {
+          @include range-thumb-hover;
+        }
       }
     }
     &[readonly] {

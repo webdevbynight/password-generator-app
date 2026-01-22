@@ -19,6 +19,7 @@
   --tertiary-background: #24232c;
   --quaternary-background: #18171f;
   --quinary-background: #a4ffaf;
+  --senary-background: #e6e5ea;
 
   // Sizes, gaps, margins, paddings, borders, transforms
   --outer-inline-padding: #{px2rem(16)};
@@ -39,6 +40,9 @@
   --character-length-size: #{px2rem(24)};
   --character-length-line-height: calc(32/24);
   --range-gap: #{px2rem(8)};
+  --range-track-height: #{px2rem(8)};
+  --range-thumb-size: #{px2rem(28)};
+  --range-thumb-border-radius: 50%;
   --checkbox-list-block-margin-start: #{px2rem(32)};
   --checkbox-list-block-margin-end: #{px2rem(16)};
   --checkbox-gap: #{px2rem(16)};

@@ -41,6 +41,9 @@
   --range-gap: #{px2rem(8)};
   --checkbox-list-block-margin-start: #{px2rem(32)};
   --checkbox-list-block-margin-end: #{px2rem(16)};
+  --checkbox-gap: #{px2rem(16)};
+  --checkbox-border-width: #{px2rem(2)};
+  --checkbox-size: #{px2rem(20)};
   --strength-size: #{px2rem(18)};
   --strength-block-padding: #{px2rem(14)};
   --strength-inline-padding: #{px2rem(16)};
@@ -66,6 +69,7 @@
     --character-length-size: #{px2rem(32)};
     --character-length-line-height: calc(42/32);
     --range-gap: #{px2rem(16)};
+    --checkbox-gap: #{px2rem(24)};
     --strength-size: #{px2rem(24)};
     --submit-button-gap: #{px2rem(24)};
   }

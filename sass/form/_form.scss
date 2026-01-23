@@ -119,6 +119,7 @@
     &[readonly] {
       font-size: var(--password-size);
       line-height: var(--password-line-height);
+      color: inherit;
       background: transparent;
       flex: 1;
     }

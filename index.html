@@ -27,22 +27,22 @@
           <ul>
             <li>
               <label for="character-length">Character Length <span class="character-length-number" aria-live="polite">0</span></label>
-              <input id="character-length" type="range" max="20" value="0" style="--max: 20; --value: 0;">
+              <input id="character-length" name="character-length" type="range" max="20" value="0" style="--max: 20; --value: 0;">
             </li>
             <li>
-              <input id="uppercase-letters" name="characters" type="checkbox">
-              <label for="uppercase-letters">Include Uppercase Letters</label>
+              <input id="uppercase" name="characters" type="checkbox" value="uppercase">
+              <label for="uppercase">Include Uppercase Letters</label>
             </li>
             <li>
-              <input id="lowercase-letters" name="characters" type="checkbox">
-              <label for="lowercase-letters">Include Lowercase Letters</label>
+              <input id="lowercase" name="characters" type="checkbox" value="lowercase">
+              <label for="lowercase">Include Lowercase Letters</label>
             </li>
             <li>
-              <input id="numbers" name="characters" type="checkbox">
+              <input id="numbers" name="characters" type="checkbox" value="numbers">
               <label for="numbers">Include Numbers</label>
             </li>
             <li>
-              <input id="symbols" name="characters" type="checkbox">
+              <input id="symbols" name="characters" type="checkbox" value="symbols">
               <label for="symbols">Include Symbols</label>
             </li>
           </ul>
@@ -56,7 +56,7 @@
         </div>
         <p aria-live="polite">
           <label for="generated-password" class="sr-only">Generated Password</label>
-          <input type="text" id="generated-password" name="generated-password" placeholder="P4$5W0rD!" readonly>
+          <input type="text" id="generated-password" placeholder="P4$5W0rD!" readonly>
           <button type="button">
             <span class="sr-only">Copy to clipboard</span>
             <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">

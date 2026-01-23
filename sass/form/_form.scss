@@ -95,8 +95,8 @@
       &::-webkit-slider-runnable-track {
         background: linear-gradient(
             to right,
-            var(--quinary-background) var(--offset),
-            var(--quaternary-background) var(--offset)
+            var(--quinary-background) var(--offset, 0%),
+            var(--quaternary-background) var(--offset, 0%)
         );
       }
       &::-moz-range-thumb {

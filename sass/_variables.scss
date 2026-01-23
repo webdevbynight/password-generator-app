@@ -37,6 +37,7 @@
   --password-block-padding: #{px2rem(16)};
   --copy-size: #{px2rem(16)};
   --copy-line-height: calc(20/16);
+  --copy-gap: #{px2rem(8)};
   --character-length-size: #{px2rem(24)};
   --character-length-line-height: calc(32/24);
   --range-gap: #{px2rem(8)};
@@ -70,6 +71,7 @@
     --password-line-height: calc(42/32);
     --copy-size: #{px2rem(18)};
     --copy-line-height: calc(24/18);
+    --copy-gap: #{px2rem(16)};
     --character-length-size: #{px2rem(32)};
     --character-length-line-height: calc(42/32);
     --range-gap: #{px2rem(16)};

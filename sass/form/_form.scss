@@ -11,15 +11,25 @@
   gap: var(--form-gap);
   > p, .prepare {
     background: var(--tertiary-background);
-    display: flex;
     padding: var(--form-inline-padding);
   }
   > p {
     order: -1;
+    position: relative;
     button {
       font-size: var(--copy-size);
       line-height: var(--copy-line-height);
+      text-transform: uppercase;
+      color: var(--quinary);
+      background: inherit;
+      display: inline-flex;
+      gap: var(--copy-gap);
+      align-items: center;
       border: none;
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-end: var(--form-inline-padding);
+      transform: translateY(-50%);
       path {
         fill: var(--quinary);
         transition: fill 250ms ease-in;
@@ -121,7 +131,7 @@
       line-height: var(--password-line-height);
       color: inherit;
       background: transparent;
-      flex: 1;
+      width: 100%;
     }
     &::placeholder {
       color: var(--tertiary);
@@ -157,6 +167,7 @@
     }
   }
   .prepare {
+    display: flex;
     flex-direction: column;
     gap: var(--form-prepare-gap);
     p:last-of-type {

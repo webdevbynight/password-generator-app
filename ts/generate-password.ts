@@ -1,9 +1,13 @@
+import type { PasswordSettings } from "./types.js";
+
+import { lowercase, numbers, symbols, uppercase } from "./utils.js";
+
 /**
  * Generates a random password based on the form data.
  * @param form - The form containing the password generation settings.
  * @return The generated password.
  */
-export const generatePassword = (form: HTMLFormElement): string => {
+export const generatePassword = (form: HTMLFormElement): PasswordSettings => {
   const data = new FormData(form);
   let characterLength = 0;
   const characterTypes = new Set<string>();
@@ -11,17 +15,30 @@ export const generatePassword = (form: HTMLFormElement): string => {
     if (key === "character-length") characterLength = Number(value);
     else if (key === "characters") characterTypes.add(String(value));
   }
+  const passwordSettings: PasswordSettings = {
+    password: "",
+    length: characterLength,
+    usesUppercase: false,
+    usesLowercase: false,
+    usesNumbers: false,
+    usesSymbols: false
+  };
   if (characterLength) {
-    const lowercase = "abcdefghijklmnopqrstuvwxyz".split("");
-    const uppercase = lowercase.map(letter => letter.toUpperCase());
-    const numbers = "0123456789".split("");
-    const symbols = "!@#$%^&*()-_=+[]{}|;:,.<>/?".split("");
     const characterSet: string[] = [];
     for (const characterType of characterTypes) {
-      if (characterType === "lowercase") characterSet.push(...lowercase);
-      else if (characterType === "uppercase") characterSet.push(...uppercase);
-      else if (characterType === "numbers") characterSet.push(...numbers);
-      else if (characterType === "symbols") characterSet.push(...symbols);
+      if (characterType === "lowercase") {
+        characterSet.push(...lowercase);
+        passwordSettings.usesLowercase = true;
+      } else if (characterType === "uppercase") {
+        characterSet.push(...uppercase);
+        passwordSettings.usesUppercase = true;
+      } else if (characterType === "numbers") {
+        characterSet.push(...numbers);
+        passwordSettings.usesNumbers = true;
+      } else if (characterType === "symbols") {
+        characterSet.push(...symbols);
+        passwordSettings.usesSymbols = true;
+      }
     }
     if (characterSet.length) {
       let password = "";
@@ -29,9 +46,8 @@ export const generatePassword = (form: HTMLFormElement): string => {
         const randomIndex = Math.floor(Math.random() * characterSet.length);
         password += characterSet[randomIndex];
       }
-      return password;
+      passwordSettings.password = password;
     }
-    return "";
   }
-  return "";
+  return passwordSettings;
 };

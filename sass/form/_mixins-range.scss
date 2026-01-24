@@ -10,7 +10,7 @@
   height: var(--range-thumb-size);
   border: none;
   border-radius: var(--range-thumb-border-radius);
-  transition: 250ms ease-in;
+  transition: background 250ms ease-in;
 }
 @mixin range-thumb-hover {
   background: var(--quaternary-background);

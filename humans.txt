@@ -1,0 +1,10 @@
+/* TEAM */
+Front-end developer: Victor Brito
+Site: https://victor-brito.dev
+Twitter, Mastodon, Bluesky: @webdevbynight
+Location: Neuilly-sur-Seine, France
+
+/* SITE */
+Last update: 2026/01/24
+Standards: HTML 5, CSS 3, JavaScript
+Software: WebStorm
